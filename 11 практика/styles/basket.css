@@ -1,0 +1,65 @@
+main {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.thing {
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	background: rgb(242, 213, 213);
+	width: 200px;
+	height: 300px;
+
+	> img {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		overflow: hidden;
+	}
+
+	> .des {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin-left: 10px;
+		margin-right: 10px;
+
+		> .imgs {
+			display: flex;
+
+			> button {
+				padding: 0;
+				margin: 0;
+				border: none;
+				background: rgb(242, 213, 213);
+				cursor: pointer;
+
+				> .plus {
+					width: 25px;
+					height: 25px;
+				}
+
+				> .min {
+					width: 29px;
+					height: 29px;
+				}
+			}
+		}
+	}
+}
+
+.costAll {
+	margin-top: 20px;
+	border: 2px solid rgb(242, 213, 213);
+	padding-left: 10px;
+
+	> h2 {
+		color: rgb(242, 213, 213);
+	}
+}

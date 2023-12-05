@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Ubuntu:wght@300&display=swap');
+
+body {
+	display: flex;
+	justify-content: center;
+	font-family: 'Ubuntu', sans-serif;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+	background-image: url('../images/49833651ba61be9c2aea5c46af93889b.jpg');
+}
+
+.glassmorphism-form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 40px;
+	padding-right: 40px;
+	background: #b8ec64;
+	border-radius: 20px;
+	width: 400px;
+	padding-bottom: 20px;
+	background: rgba(221, 242, 84, 0.7);
+	box-shadow: 0 4px 30px rgba(235, 229, 71, 0.6);
+	backdrop-filter: blur(5px);
+}
+
+.input-group {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+	align-items: center;
+	gap: 10px;
+
+	> input {
+		width: 100%;
+		font-family: 'Ubuntu', sans-serif;
+		outline: none;
+		color: #176217;
+		font-size: 20px;
+		padding: 10px;
+		height: 40px;
+		border-radius: 10px;
+		border: none;
+		position: relative;
+		background: rgba(255, 255, 255, 0.2);
+		box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+	}
+
+	> label {
+		font-size: 20px;
+		position: relative;
+		top: calc(50% - 10px);
+		left: 0;
+		pointer-events: none;
+		color: #176217;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> h2 {
+		font-size: 40px;
+		margin-bottom: 30px;
+		color: rgb(27, 111, 6);
+	}
+}
+
+.data {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-bottom: 20px;
+
+	> label {
+		font-size: 20px;
+		color: #176217;
+		position: relative;
+		left: 0;
+	}
+
+	> input {
+		outline: none;
+		font-family: 'Ubuntu', sans-serif;
+		background: rgba(255, 255, 255, 0.2);
+		box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+		border: none;
+		padding: 5px;
+		font-size: 18px;
+		border-radius: 5px;
+		color: rgb(1, 132, 5);
+	}
+}
+
+button {
+	padding: 10px 10px;
+	border-radius: 20px;
+	border: gray;
+	background: linear-gradient(to right, #3bde49, #05b811);
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	cursor: pointer;
+	font-size: 20px;
+	transition: 0.3s ease-out;
+	position: relative;
+	overflow: hidden;
+	width: 250px;
+	left: 75px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 150px;
+		width: 50px;
+		background: green;
+		left: -55px;
+		top: -40px;
+		transform: rotate(37deg);
+		transition: all 0.5s;
+		opacity: 0.3;
+	}
+
+	&:hover:before {
+		left: 95%;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 1200px) {
+	.fone {
+		position: fixed;
+		height: 150%;
+	}
+}
+
+@media (max-width: 500px) {
+	button {
+		left: 0;
+	}
+}
+
+@media (max-height: 640px) {
+	body {
+		overflow-y: scroll;
+	}
+
+	.fone {
+		height: 260%;
+	}
+}

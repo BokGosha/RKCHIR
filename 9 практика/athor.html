@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="styles/athor.css" />
+
+		<script src="js/myscript1.js"></script>
+		<script src="js/myscript2.js"></script>
+	</head>
+	<body>
+		<button class="like-container">
+			<img
+				class="like-button"
+				src="images/heart_1.png"
+				width="16"
+				height="16"
+			/>
+		</button>
+
+		<button id="heart" style="position: relative">Мой любимый книжный!</button>
+		<script>
+			let like = document.getElementById('heart')
+			let isDrawing = false
+
+			like.onclick = function () {
+				if (!isDrawing) {
+					isDrawing = true
+					document.addEventListener('mousemove', drawHeart)
+				} else {
+					isDrawing = false
+					document.removeEventListener('mousemove', drawHeart)
+				}
+			}
+
+			function drawHeart(e) {
+				let heart = document.createElement('img')
+				heart.style.backgroundColor = 'red'
+				heart.style.position = 'absolute'
+				heart.style.zIndex = '-1'
+				heart.style.left = e.clientX + 'px'
+				heart.style.top = e.clientY + 'px'
+				heart.style.width = '20px'
+				heart.style.height = '20px'
+				heart.style.borderRadius = '20px'
+				heart.src = 'images/heart_1.png'
+				document.body.appendChild(heart)
+			}
+		</script>
+	</body>
+</html>

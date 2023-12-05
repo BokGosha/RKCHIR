@@ -1,0 +1,96 @@
+#notification {
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #f2f2f2;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: none;
+	background: rgba(236, 7, 7, 0.7);
+}
+
+.notification-container {
+	position: fixed;
+	right: 5px;
+	top: 10px;
+	background: rgb(154, 245, 154);
+	border: #002200 2px solid;
+	border-radius: 100%;
+	padding: 10px;
+	z-index: 1;
+
+	> .notification-list {
+		visibility: hidden;
+		position: absolute;
+		bottom: -1000px;
+		right: -1000px;
+		list-style: none;
+		padding: 0;
+		counter-reset: notifications_count;
+
+		> p {
+			counter-increment: notifications_count;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 20px;
+			border-radius: 20px;
+			background: green;
+			transition: all 400ms;
+			width: 100px;
+			display: flex;
+			flex-flow: row;
+			gap: 5px;
+			cursor: pointer;
+
+			> button {
+				top: 1px;
+				right: 2px;
+				cursor: pointer;
+				background: green;
+				border: none;
+
+				> img {
+					width: 10px;
+					height: 10px;
+				}
+			}
+		}
+
+		> p:hover {
+			color: white;
+			box-shadow: 3px 3px 5px black;
+		}
+	}
+}
+
+@keyframes anim {
+	from {
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+	}
+	99% {
+		width: 100px;
+		height: auto;
+	}
+	to {
+	}
+}
+
+.notification-container:hover {
+	animation-name: anim;
+	animation-timing-function: ease-in;
+	border-radius: 20px;
+
+	> .notification-list {
+		visibility: visible;
+		position: static;
+	}
+}
+
+#notification_menu_sym::before {
+	content: '\1F514';
+}

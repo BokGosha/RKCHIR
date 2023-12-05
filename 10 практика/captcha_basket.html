@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<table style="border: 2px solid black">
+			<tr>
+				<td>Captcha</td>
+
+				<td>
+					<canvas
+						width="220"
+						height="60"
+						style="border: 2px solid grey"
+						id="canvas"
+					></canvas>
+				</td>
+				<td>
+					<button type="button" onclick="getCaptcha()">Refresh</button>
+				</td>
+			</tr>
+			<tr>
+				<td>Enter Captcha</td>
+
+				<td><input type="text" size="30" id="typedText" /></td>
+				<td><button type="button" onclick="checkIt()">Check</button></td>
+				<td><button id="myButton" disabled>Нажми меня</button></td>
+			</tr>
+		</table>
+
+		<script src="js/myscript4.js"></script>
+
+		<div class="cart-container">
+			<button id="addtocart">Добавить в корзину</button>
+			<i class="fa fa-shopping-cart"></i>
+			<span id="cart"></span>
+		</div>
+
+		<script>
+			function Accumulator(startingValue) {
+				this.value = startingValue
+				this.read = function () {
+					value = prompt('Введите значение, которое нужно добавить в корзину: ')
+					if (value !== null && value.trim() !== '') {
+						if (isNaN(parseInt(value)) != true) {
+							this.value += parseInt(value)
+						} else {
+							alert('Введите число.')
+						}
+					}
+				}
+			}
+
+			let cart = document.getElementById('cart')
+			let addtocart = document.getElementById('addtocart')
+			let accumulator
+			let isFirstClick = true
+			addtocart.addEventListener('click', function () {
+				if (isFirstClick) {
+					let value = prompt('Введите начальное значение: ')
+					if (value !== null && value.trim() !== '') {
+						if (isNaN(parseInt(value)) != true) {
+							accumulator = new Accumulator(parseInt(value))
+							cart.textContent = accumulator.value
+							isFirstClick = false
+						} else {
+							alert('Введите число.')
+						}
+					}
+				} else {
+					accumulator.read()
+					cart.textContent = accumulator.value
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			href="images/Снимок экрана 2023-11-01 162912.png"
+		/>
+		<link rel="stylesheet" href="styles/registration.css" />
+
+		<title>Регистрация</title>
+
+		<script src="js/myscript.js"></script>
+	</head>
+
+	<body>
+		<form
+			class="glassmorphism-form"
+			method="POST"
+			action="authorization.html"
+		>
+			<div class="head">
+				<img
+					src="images/Снимок экрана 2023-11-01 162912.png"
+					width="70px"
+					height="70px"
+				/>
+				<h2>Регистрация</h2>
+			</div>
+
+			<div class="input-group">
+				<label for="name">Имя:</label>
+				<input type="text" id="name" name="name" required />
+			</div>
+
+			<div class="input-group">
+				<label for="name">Фамилия:</label>
+				<input type="text" id="name" name="name" required />
+			</div>
+
+			<div class="input-group">
+				<label for="phone">Телефон:</label>
+				<input
+					type="tel"
+					id="phone"
+					name="phone"
+					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+					placeholder="###-###-####"
+					required
+				/>
+			</div>
+
+			<div class="input-group">
+				<label for="email">Почта:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="example@example.com"
+					required
+				/>
+			</div>
+
+			<div class="input-group">
+				<label for="password">Пароль:</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					required
+					minlength="6"
+				/>
+			</div>
+
+			<div class="data">
+				<label for="datetime">Дата рождения:</label>
+				<input type="datetime-local" id="datetime" name="datetime" required />
+			</div>
+
+			<button type="submit">Подтвердить</button>
+		</form>
+	</body>
+</html>

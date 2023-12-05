@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="styles/catalog.css" />
+
+		<title>Каталог</title>
+	</head>
+	<body>
+		<header>
+			<a href="basket.html">Корзина</a>
+
+			<select name="sort" size="1">
+				<option value="" checked>Выберите сортировку элементов</option>
+				<option value="up">По возрастанию</option>
+				<option value="down">По убыванию</option>
+			</select>
+
+			<div class="costUl">
+				<label>Цена</label>
+				<ul>
+					<li>
+						<input type="checkbox" value1="1200" value2="1300" />1200 - 1300 р.
+					</li>
+					<li>
+						<input type="checkbox" value1="1301" value2="1500" />1301 - 1500 р.
+					</li>
+					<li>
+						<input type="checkbox" value1="1501" value2="1900" />1501 - 1900 р.
+					</li>
+					<li><input type="checkbox" value1="1901" />1901 р. и более</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<div class="thing" data-item="1">
+				<img src="images/1.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1280</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="2">
+				<img src="images/2.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1320</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="3">
+				<img src="images/3.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1450</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="4">
+				<img src="images/4.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1370</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="5">
+				<img src="images/5.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1920</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="6">
+				<img src="images/6.jpg" />
+
+				<div class="des">
+					<p><span class="cost">2430</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="7">
+				<img src="images/7.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1800</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="thing" data-item="8">
+				<img src="images/8.jpg" />
+
+				<div class="des">
+					<p><span class="cost">1230</span> р.</p>
+
+					<div class="imgs">
+						<button><img class="plus" src="images/plus.png" /></button>
+						<button><img class="min" src="images/minus.png" /></button>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/button.js"></script>
+		<script src="js/sort.js"></script>
+		<script src="js/filter.js"></script>
+	</body>
+</html>
