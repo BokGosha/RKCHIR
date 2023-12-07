@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+main {
+	margin-top: 110px;
+	min-height: 87vh;
+}
+
+.introduction {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 0;
+	padding: 10px;
+	gap: 20px;
+
+	> img {
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+		border-radius: 100%;
+		box-shadow: 0 5px 10px black;
+	}
+
+	> .description {
+		> h2 {
+			text-align: center;
+			color: #1d5d04;
+			font-size: 30px;
+		}
+
+		> p {
+			text-align: justify;
+			text-indent: 2rem;
+			line-height: 2;
+			font-size: larger;
+		}
+	}
+}
+
+.advantages {
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+
+	> h3 {
+		font-size: 25px;
+		color: #1d5d04;
+		padding-left: 2rem;
+		margin: 0;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	> ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		padding: 0;
+
+		> li {
+			list-style: none;
+
+			> fieldset {
+				box-shadow: 0 4px 30px rgb(101, 244, 101, 0.505);
+				background-color: #daddda;
+				height: 80%;
+				width: 410px;
+				border-radius: 20px;
+				border: 2px rgb(101, 244, 101, 0.505) solid;
+
+				> legend {
+					border: 1px rgb(84, 217, 84) solid;
+					border-radius: 20px;
+					background-color: #edeaea;
+					font-size: 20px;
+					padding: 5px;
+					color: green;
+				}
+
+				> p {
+					margin: 0;
+					font-size: 18px;
+					padding-bottom: 20px;
+					text-indent: 30px;
+					line-height: 1.5;
+					text-align: justify;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.introduction {
+		flex-direction: column;
+
+		> img {
+			border-radius: 20px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (max-width: 950px) {
+	.advantages {
+		margin: 0;
+		margin-bottom: 30px;
+
+		> ul {
+			margin: 10px;
+
+			> li {
+				> fieldset {
+					width: auto;
+					height: 80%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 580px) {
+	main {
+		margin-top: 160px;
+	}
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			href="images/2023-11-01 162912.png"
+		/>
+
+		<link rel="stylesheet" href="styles/catalog.css" />
+		<link rel="stylesheet" href="styles/header.css" />
+		<link rel="stylesheet" href="styles/footer.css" />
+		<link rel="stylesheet" href="styles/body.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<title>Каталог</title>
+	</head>
+
+	<body>
+		<header>
+			<h1>Комнатные растения</h1>
+
+			<input type="checkbox" id="burger-checkbox" />
+			<label for="burger-checkbox" class="burger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+
+			<nav class="burger-menu">
+				<ul class="menu">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li>
+						<a href="favourites.html"
+							>Избранное <span id="favoriteCount">0</span></a
+						>
+					</li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+
+				<a class="click-btn btn-style" href="authorization.html"
+					><img
+						src="images/free-icon-import-4803282.png"
+						width="30"
+						height="30"
+				/></a>
+			</nav>
+		</header>
+
+		<main>
+			<div class="gallery-container">
+				<div class="image_1">
+					<img class="image_i" src="images/543.750x0.jpg" alt="Замиокулькас" />
+
+					<div class="description">
+						<h2>Замиокулькас</h2>
+						<a href="zamiokulkas.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="1">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_2">
+					<img
+						class="image_i"
+						src="images/anthurium-210827_1920.jpg"
+						alt="Антуриум"
+					/>
+
+					<div class="description">
+						<h2>Антуриум</h2>
+						<a href="anturium.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="2">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_3">
+					<img
+						class="image_i"
+						src="images/1650526944_37-vsegda-pomnim-com-p-kak-viglyadit-tsvetok-koleus-foto-38.jpg"
+						alt="Колеус"
+					/>
+
+					<div class="description">
+						<h2>Колеус</h2>
+						<a href="koleus.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="3">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_4">
+					<img
+						class="image_i"
+						src="images/f3ca7c9d996533932c528277011d390d.png"
+						alt="Бегония"
+					/>
+
+					<div class="description">
+						<h2>Бегония</h2>
+						<a href="begonia.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="4">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_5">
+					<img class="image_i" src="images/382_2.jpg" alt="Аглаонема" />
+
+					<div class="description">
+						<h2>Аглаонема</h2>
+						<a href="aglaonema.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="5">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_6">
+					<img
+						class="image_i"
+						src="images/8f85af9633aa75e818603a739e627c5b.jpeg"
+						alt="Венерина мухоловка"
+					/>
+
+					<div class="description">
+						<h2>Венерина мухоловка</h2>
+						<a href="muholovka.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="6">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_7">
+					<img class="image_i" src="images/1-58.jpg" alt="Гипоэстес" />
+
+					<div class="description">
+						<h2>Гипоэстес</h2>
+						<a href="gipoestes.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="7">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+
+				<div class="image_8">
+					<img
+						class="image_i"
+						src="images/f0bbfd30cc958545fb03fdc8b5b83735.jpg"
+						alt="Ктенанта"
+					/>
+
+					<div class="description">
+						<h2>Ктенанта</h2>
+						<a href="ktenanta.html"><button>Подробнее</button></a>
+					</div>
+
+					<button class="like-container" data-id="8">
+						<img
+							class="like-button"
+							src="images/heart_1.png"
+							width="16"
+							height="16"
+						/>
+					</button>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="shell">
+				<span class="about">
+					<h3 class="title">О Нашем Сайте</h3>
+
+					<p>
+						Мы предлагаем подробные описания каждого растения, советы по уходу и
+						подбору подходящих условий. Узнайте, какие растения каких условий
+						требуют, и тогда они будут украшать вашу комнату. Ростите зелень,
+						украшайте свой дом и наслаждайтесь природой прямо внутри своих
+						четырех стен!
+					</p>
+
+					<div id="social_media">
+						<div class="soc_button youtube">
+							<a
+								class="fa fa-youtube-play"
+								href="https://www.youtube.com"
+								target="_blank"
+							></a>
+						</div>
+						<div class="soc_button telegram">
+							<a
+								class="fa fa-telegram"
+								href="https://telegram.org"
+								target="_blank"
+							></a>
+						</div>
+						<div class="soc_button vk">
+							<a class="fa fa-vk" href="https://vk.com" target="_blank"></a>
+						</div>
+					</div>
+				</span>
+
+				<span class="links">
+					<h3 class="title">Ссылки</h3>
+
+					<ul>
+						<li><a href="catalog.html">Каталог</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</span>
+
+				<span class="contacts">
+					<h3 class="title">Контакты</h3>
+
+					<address>
+						<div class="icon-block">
+							<i class="fa fa-map-marker ico-contact"></i>
+
+							<p>128000, г. Москва, пр-кт Вернадского, дом 78, Кабинет А-108</p>
+						</div>
+
+						<div class="icon-block">
+							<i class="fa fa-envelope ico-contact"></i>
+
+							<a id="email" href="mailto:example@mail.ru">goshik04@gmail.ru</a>
+						</div>
+
+						<div class="icon-block">
+							<i class="fa fa-phone ico-contact"></i>
+
+							<div class="tel-numbers">
+								<a href="tel:8 (800) 555-35-35">8 (958) 832-29-74</a>
+								<a href="tel:+7 (900) 012-34-56">+7 (958) 832-29-74</a>
+							</div>
+						</div>
+					</address>
+				</span>
+			</div>
+
+			<span id="rights"><i>© Собственность студента, 2023 год</i></span>
+		</footer>
+		<script src="js/like-button.js"></script>
+	</body>
+</html>

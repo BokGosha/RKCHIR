@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<title>Контакты</title>
+
+		<link rel="icon" type="image/png" href="images/2023-11-01 162912.png" />
+		<link rel="stylesheet" href="styles/contacts.css" />
+	</head>
+
+	<body>
+		<form class="glassmorphism-form" method="POST">
+			<div class="head">
+				<img src="images/2023-11-01 162912.png" width="70px" height="70px" />
+				<h2>Контакты</h2>
+			</div>
+
+			<div class="input-group">
+				<input type="text" id="name" name="name" required />
+				<label for="name">Имя</label>
+			</div>
+
+			<div class="input-group">
+				<input type="text" id="name" name="name" required />
+				<label for="name">Фамилия</label>
+			</div>
+
+			<div class="input-group">
+				<input
+					type="tel"
+					id="phone"
+					name="phone"
+					pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+					required
+				/>
+				<label for="phone">Телефон</label>
+			</div>
+
+			<div class="input-group">
+				<input type="email" id="email" name="email" required />
+				<label for="email">Почта</label>
+			</div>
+
+			<div class="message-group">
+				<input type="text" id="message" name="message" required />
+				<label for="message">Ваше сообщение</label>
+			</div>
+
+			<button type="submit">Отправить</button>
+		</form>
+	</body>
+</html>

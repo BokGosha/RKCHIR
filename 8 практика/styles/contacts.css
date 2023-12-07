@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&family=Ubuntu:wght@300&display=swap');
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url('../images/kartinki-listya-8.jpg');
+}
+
+.glassmorphism-form {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 300px 300px;
+	grid-template-rows: 100px 70px 70px 70px 50px;
+	gap: 20px;
+	padding-left: 60px;
+	padding-right: 60px;
+	border-radius: 20px;
+	padding-bottom: 25px;
+	background: rgba(92, 228, 98, 0.7);
+	box-shadow: 0 4px 30px rgba(79, 248, 79, 0.6);
+	backdrop-filter: blur(5px);
+}
+
+.head {
+	grid-column: span 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 25px;
+
+	> h2 {
+		font-size: 40px;
+		color: rgb(27, 111, 6);
+	}
+}
+
+.message-group {
+	grid-column: span 2;
+}
+
+.input-group,
+.message-group {
+	position: relative;
+	display: flex;
+	margin-bottom: 20px;
+
+	> input {
+		padding-top: 10px;
+		height: 40px;
+		width: 100%;
+		border: none;
+		position: relative;
+		background: transparent;
+		border-bottom: 3px solid green;
+		color: #ffffff;
+		font-size: 20px;
+		font-family: 'Ubuntu', sans-serif;
+		outline: none;
+	}
+
+	> label {
+		font-size: 20px;
+		transition: 0.3s ease-out;
+		position: absolute;
+		top: 20px;
+		left: 0;
+		pointer-events: none;
+		color: #176217;
+	}
+
+	> input:focus {
+		padding: 10px;
+		height: 40px;
+		width: 100%;
+		border: none;
+		position: relative;
+		background: rgba(255, 255, 255, 0.2);
+		box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+		color: #176217;
+		font-size: 20px;
+	}
+
+	> input:focus + label,
+	input:valid + label {
+		top: 0;
+		color: #fff;
+		transform: translateY(-50%);
+		font-size: 14px;
+		background: linear-gradient(to right, #14771e, #28d931);
+		padding: 2px 5px;
+		border-radius: 3px;
+	}
+}
+
+button {
+	padding: 13px;
+	border-radius: 20px;
+	border: gray;
+	background: linear-gradient(to right, #74e71c, #05b811);
+	color: white;
+	cursor: pointer;
+	font-size: 20px;
+	transition: 0.3s ease-out;
+	overflow: hidden;
+	width: 250px;
+	position: relative;
+	box-shadow: 0 5px 40px rgba(79, 248, 79, 0.6);
+	border: 3px solid green;
+	font-family: 'Ubuntu', sans-serif;
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 150px;
+		width: 50px;
+		background: green;
+		left: -55px;
+		top: -40px;
+		transform: rotate(37deg);
+		transition: all 0.5s;
+		opacity: 0.3;
+	}
+
+	&:hover:before {
+		left: 95%;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+@media (max-width: 770px) {
+	.glassmorphism-form {
+		display: block;
+		width: 400px;
+	}
+
+	button {
+		margin-top: 5px;
+	}
+}
+
+@media (max-height: 485px) {
+	body {
+		overflow-y: scroll;
+	}
+}
+
+@media (max-height: 620px) and (max-width: 770px) {
+	body {
+		overflow-y: scroll;
+	}
+}
+
+@media (max-width: 540px) {
+	.glassmorphism-form {
+		margin-left: 10px;
+		margin-right: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
