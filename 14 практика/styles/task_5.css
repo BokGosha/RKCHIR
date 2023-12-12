@@ -1,0 +1,21 @@
+#cart {
+    width: 200px;
+    height: 300px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    margin-right: 20px;
+    float: left;
+}
+
+#cart-content {
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.item {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    background-color: aquamarine;
+    cursor: move;
+}

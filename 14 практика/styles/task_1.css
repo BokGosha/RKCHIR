@@ -1,0 +1,32 @@
+#contents {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+
+    &:hover {
+        color: red;
+    }
+
+    &:active {
+        color: green;
+    }
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
